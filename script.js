@@ -13,6 +13,7 @@ const isPalindrome = (word) => {
 
 const renderResponse = (word) => {
 
+
 }
 
 
@@ -24,6 +25,14 @@ const eventHandler = () => {
     }
 
     const word = input.value;
+
+    if (isPalindrome(word)) {
+        resultDiv.innerHTML = `<span>${word}</span> is a palindrome`
+        console.log("co nie działa")
+    } else {
+        resultDiv.innerHTML = `<span>${word}</span> is not a palindrome`
+    }
+
 
 }
 
