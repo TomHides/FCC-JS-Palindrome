@@ -28,7 +28,6 @@ const eventHandler = () => {
 
     if (isPalindrome(word)) {
         resultDiv.innerHTML = `<span>${word}</span> is a palindrome`
-        console.log("co nie działa")
     } else {
         resultDiv.innerHTML = `<span>${word}</span> is not a palindrome`
     }
@@ -43,4 +42,9 @@ const eventHandler = () => {
 
 
 
-checkBtn.addEventListener("click", eventHandler)
+checkBtn.addEventListener("click", eventHandler);
+input.addEventListener("keydown", (e => {
+    if (e.key === "Enter") {
+        eventHandler();
+    }
+}));
